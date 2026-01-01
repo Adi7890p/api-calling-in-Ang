@@ -16,4 +16,8 @@ export class DataService {
   getPublicData():Observable<Postdata[]>{
     return this.http.get<Postdata[]>("https://jsonplaceholder.typicode.com/posts");
   }
+
+  getcustomPost(r:Number):Observable<Postdata>{
+    return this.http.get<Postdata>("https://jsonplaceholder.typicode.com/posts/"+r)
+  }
 }
